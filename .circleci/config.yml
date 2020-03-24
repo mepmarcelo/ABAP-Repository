@@ -5,6 +5,9 @@ jobs:
       - image: circleci/node:latest
     environment:
       IMAGETAG: latest
-    working_directory: ~/main
+    working_directory: ~/abap-ci-pipeline
     steps:
-      - run: echo "This is pipeline ID << pipeline.id >>"
+      - checkout
+      - add_ssh_keys: 
+        fingerprints:
+        - "a6:bb:25:31:95:59:15:5e:03:1f:7d:b3:30:27:ac:e2"

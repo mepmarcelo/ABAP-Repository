@@ -16,7 +16,7 @@ jobs:
       - node/with-cache:
           steps:
           - run: npm install
-      - run: npm run abapUnit
+          - run: npm run abapUnit
 workflows:
     build-and-test:
       jobs:
