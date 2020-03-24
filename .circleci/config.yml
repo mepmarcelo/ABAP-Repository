@@ -1,16 +1,19 @@
 version: 2.1
 orbs:
-  node: circleci/node@12.16.1
+  node: circleci/node@1.1.6
 jobs:
   build-and-test:
     executor:
       name: node/default
     steps:
+      - add_ssh_keys:
+          fingerprints:
+            - "a6:bb:25:31:95:59:15:5e:03:1f:7d:b3:30:27:ac:e2"
       - checkout
       - node/with-cache:
           steps:
             - run: npm install
-            - run: npm test
+            - run: npm run abap-unit/index.js
 workflows:
     build-and-test:
       jobs:
