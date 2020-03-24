@@ -1,23 +1,10 @@
 version: 2.1
-orbs:
-  node: circleci/node@1.1.6
-working_directory: ~/abap-ci-pipeline
 jobs:
-  build-and-test:
-    executor:
-      name: node/default
+  build:
+    docker:
+      - image: circleci/node:latest
+    environment:
+      IMAGETAG: latest
+    working_directory: ~/main
     steps:
-      - checkout
-      - add_ssh_keys: 
-        fingerprints:
-        - "a6:bb:25:31:95:59:15:5e:03:1f:7d:b3:30:27:ac:e2"
-      - attach_workspace:
-        at: ~/abap-ci-pipeline
-      - node/with-cache:
-          steps:
-          - run: npm install
-      - run: npm run abapUnit
-workflows:
-    build-and-test:
-      jobs:
-        - build-and-test
+      - run: echo "This is pipeline ID << pipeline.id >>"
