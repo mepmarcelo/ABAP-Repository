@@ -2,7 +2,7 @@ version: 2.1
 orbs:
   node: circleci/node@1.1.6
 jobs:
-  build-and-test:
+  build:
     executor:
       name: node/default
     steps:
@@ -17,6 +17,6 @@ jobs:
             - run: npm install
             - run: npm run abapUnit
 workflows:
-    build-and-test:
+    build:
       jobs:
         - build-and-test
