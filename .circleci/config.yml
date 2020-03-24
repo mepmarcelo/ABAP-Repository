@@ -7,7 +7,6 @@ jobs:
       IMAGETAG: latest
     working_directory: ~/abap-ci-pipeline
     steps:
-      - checkout
-      - add_ssh_keys: 
+    - add_ssh_keys: 
         fingerprints:
         - "a6:bb:25:31:95:59:15:5e:03:1f:7d:b3:30:27:ac:e2"
