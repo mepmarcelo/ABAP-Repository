@@ -9,6 +9,5 @@ jobs:
             - "5a:29:79:47:86:86:00:da:35:05:2f:c2:2f:2b:33:1e"
       - checkout
       - run: git clone -b 'master' git@github.com:mepmarcelo/abap-ci-pipeline.git
-  abap_unit:
-    steps:
       - run: echo "hello world"
+
