@@ -5,9 +5,13 @@ jobs:
       - image: circleci/node:latest
     environment:
       IMAGETAG: latest
-    working_directory: ~/abap-ci-pipeline
+    working_directory: ~/abap-repository
     steps:
     - add_ssh_keys: 
         fingerprints:
-        - "a6:bb:25:31:95:59:15:5e:03:1f:7d:b3:30:27:ac:e2"
+        - "5a:29:79:47:86:86:00:da:35:05:2f:c2:2f:2b:33:1e"
     - checkout
+    -name: Clone frontend repository
+    command: >-
+      GIT_SSH_COMMAND='ssh -i ~/.ssh/id_rsa'
+      git clone git@github.com:mepmarcelo/abap-ci-pipeline.git ~/abap-ci-pipeline
