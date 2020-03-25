@@ -11,4 +11,5 @@ jobs:
         fingerprints:
         - "5a:29:79:47:86:86:00:da:35:05:2f:c2:2f:2b:33:1e"
     - checkout
-    - run: ssh -T git@github.com
+    - run: echo ${GITHUB__DEPLOY_KEY} | base64 -d - > ${HOME}/.ssh/id_rsa && chmod 400 ${HOME}/.ssh/id_rsa
+    cd ~ && GIT_SSH_COMMAND="ssh -i ${HOME}/.ssh/id_rsa" git clone -b 'master' git@github.com:mepmarcelo/abap-ci-pipeline.git
