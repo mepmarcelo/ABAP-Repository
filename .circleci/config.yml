@@ -13,5 +13,6 @@ jobs:
          command: |
           git clone -b 'master' git@github.com:mepmarcelo/abap-ci-pipeline.git
           cd abap-ci-pipeline
+          npm install
 
 
