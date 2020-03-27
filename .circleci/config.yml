@@ -15,7 +15,7 @@ jobs:
           cd abap-ci-pipeline-new
           npm install
           npm run abapUnit
-        - store_test_results:
-          path: abap-unit/reports
+      - store_test_results:
+        path: abap-unit/reports
 
 
