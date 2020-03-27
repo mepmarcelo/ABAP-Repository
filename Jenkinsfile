@@ -5,7 +5,7 @@ pipeline {
       steps {
         deleteDir()
         dir('sap-pipeline') {
-          git credentialsId: 'GibHub', url: 'https://github.com/mepmarcelo/abap-ci-pipeline'
+          git credentialsId: 'GibHub', url: 'https://github.com/mepmarcelo/abap-ci-pipeline-new'
           echo 'Path: ${PATH}'
           sh 'node -v'
           sh 'npm -v'
