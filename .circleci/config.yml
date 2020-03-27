@@ -6,7 +6,7 @@ jobs:
     steps:
       - add_ssh_keys: 
           fingerprints:
-            - "5a:29:79:47:86:86:00:da:35:05:2f:c2:2f:2b:33:1e"
+            - "a6:bb:25:31:95:59:15:5e:03:1f:7d:b3:30:27:ac:e2"
       - checkout
       - run: 
          name: Clone Repo abap-ci-pipeline
