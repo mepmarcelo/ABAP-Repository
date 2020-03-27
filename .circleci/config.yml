@@ -8,8 +8,6 @@ jobs:
           fingerprints:
             - "a6:bb:25:31:95:59:15:5e:03:1f:7d:b3:30:27:ac:e2"
       - checkout
-      - store_test_results:
-        path: abap-unit/result
       - run: 
          name: Clone Repo abap-ci-pipeline-new
          command: |
@@ -17,6 +15,7 @@ jobs:
           cd abap-ci-pipeline-new
           npm install
           npm run abapUnit
-
+        - store_test_results:
+          path: abap-unit/reports
 
 
