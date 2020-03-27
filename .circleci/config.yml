@@ -12,7 +12,7 @@ jobs:
          name: Clone Repo abap-ci-pipeline-new
          command: |
           git clone -b 'master' git@github.com:mepmarcelo/abap-ci-pipeline-new.git
-          cd abap-ci-pipeline
+          cd abap-ci-pipeline-new
           npm install
           npm run abapUnit 
 
