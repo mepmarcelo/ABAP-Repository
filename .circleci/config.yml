@@ -9,7 +9,7 @@ jobs:
             - "a6:bb:25:31:95:59:15:5e:03:1f:7d:b3:30:27:ac:e2"
       - checkout
       - run: 
-         name: Clone Repo abap-ci-pipeline
+         name: Clone Repo abap-ci-pipeline-new
          command: |
           git clone -b 'master' git@github.com:mepmarcelo/abap-ci-pipeline-new.git
           cd abap-ci-pipeline
