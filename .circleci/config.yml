@@ -17,5 +17,7 @@ jobs:
       - run: npm run abapUnit
       - store_test_results:
         path: abap-unit/reports
+      - store_artifacts:
+        path: abap-unit/reports
 
 
