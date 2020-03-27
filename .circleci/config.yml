@@ -14,6 +14,10 @@ jobs:
           git clone -b 'master' git@github.com:mepmarcelo/abap-ci-pipeline-new.git
           cd abap-ci-pipeline-new
           npm install
-          npm run abapUnit 
+      - abap_unit: 
+        name: Run ABAP Unit
+        npm run abapUnit
+        - store_test_results:
+          path: abap-unit/result
 
 
